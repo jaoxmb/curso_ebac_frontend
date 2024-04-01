@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
-const form__input = document.querySelector('.form__input');
-const result__number = document.querySelector('.result__number');
-const result__list = document.querySelector('.result__list');
+const form__input = document.querySelector('.randomize__form__input');
+const result__number = document.querySelector('.randomize__result__number');
+const result__list = document.querySelector('.randomize__result__list');
 
 let currentRandomList;
 let index = 0;
@@ -35,13 +35,13 @@ form.addEventListener('submit', (e) => {
     result__list.innerHTML = '';
   
     if (index > 5) {
-      result__list.innerHTML += `<li class="result__item result__item--dot">...</li>`;
+      result__list.innerHTML += `<li class="randomize__result__item randomize__result__item--dot">...</li>`;
     }
   
     filtred
       .slice(-5)
       .map(item => {
-        result__list.innerHTML += `<li class="result__item">${item}</li>`;
+        result__list.innerHTML += `<li class="randomize__result__item">${item}</li>`;
       })
   }
 
