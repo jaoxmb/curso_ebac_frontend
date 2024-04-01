@@ -3,28 +3,42 @@ const form__input = document.querySelector('.form__input');
 const result__number = document.querySelector('.result__number');
 const result__list = document.querySelector('.result__list');
 
-let sorted = [];
+let currentRandomList;
+let index = 0;
+let max = 0;
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const input = e.currentTarget[0];
-  const maxNumber = input.value;
+  const maxNumber = Number(input.value);
 
-  if (!inputValidity(input, maxNumber)) {
+  // Reseta os parametros caso o usuario insira um valor de numero maximo diferente do atual
+  if (max != maxNumber) {
+    currentRandomList = new randomArray(maxNumber);
+    max = maxNumber;
+    index = 0;
+  }
+  // Verifica o fim da lista de números aleatorios
+  if (index === currentRandomList.list.length) {
+    alert("Você atingiu o número máximo de números aleatórios.");
     return;
   }
 
   const handlerNumber = () => {
-    result__number.textContent = random(Number(maxNumber));
+    result__number.textContent = currentRandomList.list[index];
+    index++
   }
   const handlerList = () => {
+    const filtred = currentRandomList.list
+      .slice(0, index)
+
     result__list.innerHTML = '';
   
-    if (sorted.length >= 5) {
+    if (index > 5) {
       result__list.innerHTML += `<li class="result__item result__item--dot">...</li>`;
     }
   
-    sorted
+    filtred
       .slice(-5)
       .map(item => {
         result__list.innerHTML += `<li class="result__item">${item}</li>`;
@@ -37,44 +51,33 @@ form.addEventListener('submit', (e) => {
 
 form__input.addEventListener('input', (e) => {
   const current = e.target;
-  const maxNumber = current.value;
+  const maxNumber = Number(current.value);
 
-  inputValidity(current, maxNumber);  
+  if (maxNumber <= 1) {
+    current.setCustomValidity('Insira um valor númerico igual a 1 ou maior do que 1.');
+  }
+
+  current.setCustomValidity('');
 })
 
-function inputValidity(input, maxNumber) {
-  maxNumber = Number(maxNumber);
+const randomArray = class {
+  list = [];
 
-  if (maxNumber <= 0) {
-    input.setCustomValidity('Insira um valor númerico igual a 1 ou maior do que 1.');
-    return false;
+  constructor (maxNumber) {
+    this.randomize(maxNumber);
   }
-  input.setCustomValidity('');
-  return true;
-}
 
-function random(maxNumber) {
-  const handlerSorted = (number) => {
-    sorted.push(number);
-    return number;
-  }
-  const handlerRandomNumber = () => {
-    let random, exist = true;
-    
-    while (exist) {
-      random = parseInt(Math.random() * maxNumber);
-      exist = sorted.find(value => value === random) === undefined ? false : true;
+  randomize (maxNumber) {
+    const calc = () => {
+      const random = parseInt(Math.random() * (maxNumber + 1));
+      if (this.list.includes(random)) {
+        return;
+      }
+      this.list.push(random);
     }
-    
-    return random;
-  }
 
-  maxNumber++
-
-  if (sorted.length === maxNumber) {
-    alert('Você já sorteou todos os números possíveis.');
-    return sorted.slice(-1);
+    while (this.list.length < maxNumber) {
+      calc();
+    }
   }
-  
-  return handlerSorted(handlerRandomNumber());
 }
