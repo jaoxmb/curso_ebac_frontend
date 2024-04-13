@@ -1,7 +1,7 @@
 {
-  "name": "curso_ebac_frontend",
+  "name": "Random Number Generator - Testing Grunt",
   "version": "1.0.0",
-  "description": "Este repositorio conterá todo o meu progresso de aprendizado do curso de FrontEnd.",
+  "description": "Este projeto foi feito para testar o uso do Grunt em projetos reais.",
   "main": "",
   "scripts": {
     "dev": "grunt",
