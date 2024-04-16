@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@primaryColor: #f6ae2d;
+@secundaryColor: #f26419;
+@fontPrimaryColor: #ffffff;
+@fontSecundaryColor: #000000;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: @fontPrimaryColor;
+  background-color: @primaryColor;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  min-width: 430px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: inherit;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.form {
+  width: 100%;
+
+  &__label {
+    background-color: @fontPrimaryColor;
+    padding: 10px 10px 10px 30px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+  }
+  &__input {
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: transparent;
+    color: @fontSecundaryColor;
+
+    &::placeholder {
+      color: @primaryColor;
+    }
+  }
+  &__button {
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: @primaryColor;
+    padding: 7px 14px;
+    transition: all 1s;
+    position: relative;
+    
+    &:hover, &:disabled {
+      color: @fontPrimaryColor;
+      background-color: @secundaryColor;
+    }
+  }
+}
