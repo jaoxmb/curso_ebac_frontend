@@ -1,0 +1,15 @@
+@import url(./thema.css);
+@import url(./layout.css);
+@import url(./modules.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
