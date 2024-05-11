@@ -1,5 +1,4 @@
-### Curso Ebac FrontEnd
+# Métodos SMACSS e BEM
+Durante esse módulo foi passado duas convenções mais usadas por Devs para escrever suas folhas de estilo, sendo elas, metodologia SMCASS para a separação das folhas de estilo seguindo seus 5 pilares: Base, Layout, Thema, Stade e Modules. Também foi passado a metodologia BEM para a nomenclatura de elementos seguindo os seus 3 pilares: Block, Element e Modifier.
 
-Este repositorio conterá todo o meu progresso de aprendizado do curso de FrontEnd.
-
-Inicio em 2023.
+Ambas as convenções tem como objetivo facilitar a manutenção do código bem como a facíl interpretação por outros Devs. Aplicando as metodologias consiguiremos uma melhora de performance na manutenção, escrita e compreensão daquilo que estamos fazendo.
