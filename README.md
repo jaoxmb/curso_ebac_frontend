@@ -1,3 +1,5 @@
+![Header](./public/header.png)
+
 # Aplicando Metodologia SMACSS e BEM à folha de estilo
 Para esse exercício, foi necessário aplicar duas metodologias de escrita de CSS, sendo elas, [SMACSS](https://smacss.com/) e [BEM](https://getbem.com/). Ambas metodologias visa uma melhora significativa na compreensão do folha de estilo, bem como a fácil manutenção da mesma.
 
