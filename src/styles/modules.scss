@@ -1,0 +1,33 @@
+@use 'thema';
+
+.produtos { // Block
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 1%;
+
+  .produto { // Block
+    border-radius: 10px;
+
+    // Elements
+    &__imagem {
+      width: 100%;
+      border-radius: 10px;
+    }
+    &__nome {
+      font-size: 1.2em;
+      margin: 8px 0 8px 8px;
+    }
+    &__descricao {
+      color: gray;
+      margin: 0 0 8px 8px;
+    }
+    
+    // Modifier
+    &--em-destaque {
+      background-color: thema.$blue-tertiary;
+      border: 2px solid thema.$blue-primary;
+      outline: 4px solid thema.$blue-tertiary;
+      padding: 4px;
+    }
+  }
+}
