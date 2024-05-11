@@ -1,0 +1,14 @@
+{
+  "name": "bem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass ./src/styles/*.scss ./dev/styles/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.77.1"
+  }
+}

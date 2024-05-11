@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ECF0F7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #636756;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  padding: 10px;
+}
+.form__control {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 15px;
+}
+.form__label {
+  color: #B2AEA5;
+  margin-bottom: 8px;
+}
+.form__input {
+  background-color: #fff;
+  border: 2px solid #B2AEA5;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: inherit;
+  transition: border 0.3s;
+}
+.form__input:hover, .form__input:focus {
+  border: 2px solid #2c42fc;
+}
+.form__input:focus {
+  outline: 3px solid #92a2e0;
+}
+.form__button {
+  background-color: #2c42fc;
+  border-radius: 10px;
+  border: 2px solid #2c42fc;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  transition: border 0.3s;
+  cursor: pointer;
+}
+.form__button:hover {
+  color: #cfd7ed;
+}
+.form__button:focus {
+  outline: 3px solid #92a2e0;
+}
+
+/*# sourceMappingURL=main.css.map */
