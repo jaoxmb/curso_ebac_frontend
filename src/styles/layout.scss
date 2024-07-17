@@ -1,0 +1,119 @@
+@use 'theme';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 theme.$margin;
+  position: relative;
+
+  &--sm {
+    max-width: 1280px;
+    padding: 0 calc(theme.$margin * 2);
+
+    @media (max-width: theme.$mobile-break) {
+      padding: 0 theme.$margin;
+    }
+  }
+}
+
+.font {
+  &--white {
+    color: #ffffff !important;
+  }
+  &--primary-color {
+    color: theme.$color-primary !important;
+  }
+  &--secundary-color {
+    color: theme.$color-secundary !important;
+  }
+  &--bottom {
+    margin-bottom: 1rem;
+  }
+}
+
+.text { 
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: theme.$color-primary;
+  text-decoration: none;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 32px;
+  color: theme.$color-primary;
+  text-transform: uppercase;
+  
+  &--md {
+    font-size: 88px;
+    letter-spacing: 4px;
+  }
+  &--bg {
+    font-size: min(104px, 10vw);
+
+    @media (max-width: theme.$mobile-break) {
+      font-size: 72px;
+    }
+  }
+
+}
+
+.button, .input {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.button {
+  background-color: theme.$color-primary;
+  color: theme.$color-tertiary;
+  text-align: center;
+  
+  &:hover {
+    background-color: darken(theme.$color-primary, 5);
+  }
+
+  &--line {
+    color: theme.$color-primary;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px theme.$color-primary;
+    
+    &:hover {
+      background-color: theme.$color-primary;
+      color: theme.$page-color;
+    }
+    
+    &-white {
+      background-color: transparent;
+      color: #ffffff;
+      box-shadow: inset 0px 0px 0px 2px #ffffff;
+
+      &:hover {
+        background-color: #ffffff;
+        color: theme.$color-primary;
+      }
+    }
+  }
+}
+
+.input {
+  color: theme.$color-primary;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 2px theme.$color-primary;
+
+  &::placeholder {
+    color: theme.$color-primary;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.protected {
+  user-select: none;
+}

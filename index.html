@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violet Evergarden</title>
+  <link rel="stylesheet" href="./src/styles/main.scss">
+  <link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://naver.github.io/egjs-flicking-plugins/release/latest/dist/flicking-plugins.css">
+</head>
+<body>
+  <header class="header header--disabled">
+    <div class="container">
+      <nav>
+        <ul class="header__list">
+          <li class="header__list__item">
+            <a class="text" href="#hero">
+              Início
+            </a>
+          </li>
+          <li class="header__list__item">
+            <a class="text" href="#about">
+              História
+            </a>
+          </li>
+          <li class="header__list__item">
+            <a class="text" href="#ep">
+              Episódios
+            </a>
+          </li>
+          <li class="header__list__item">
+            <a class="text" href="#manga">
+              Mangá
+            </a>
+          </li>
+          <li class="header__list__item">
+            <a class="text" href="#characters">
+              Personagens
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container container--sm">
+      <h1 class="hero__brand protected">
+        <img src="./src/assets/hero/violet-logo.svg" alt="Violet Logo"/>
+      </h1>
+      <div class="hero__content">
+        <div class="hero__content__image protected">
+          <picture>
+            <source srcset="./src/assets/hero/violet-hero-desktop.png" media="(min-width: 900px)" type="image/png" />
+  
+            <img src="./src/assets/hero/violet-hero-mobile.png" alt="Violet Evergarden Picture">
+          </picture>
+        </div>
+        <div class="hero__content__trailer">
+          <div>
+            <h2 class="title">Conheça a História</h2>
+            <p class="text font--bottom">
+              A guerra acabou, e Violet Evergarden precisa de um emprego. Com cicatrizes e insensível, ela aceita trabalhar como escritora de cartas para entender a si mesma e seu passado.
+            </p>
+            <button class="button button--line">
+              Ver Trailer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container container--sm">
+      <div class="about__content">
+        <div>
+          <h3 class="title title--bg">
+            História
+          </h3>
+          <p class="text">
+            Violet é uma criança soldado cuja vida conheceu nada para além da morte. Como tal, é destituída de emoções e carrega uma reputação como arma implacável. Durante a batalha final da guerra na qual participa, os seus ferimentos levaram à perda de ambos os seus braços. Como tal, são substituídos por próteses mecânicas.
+          </p>
+        </div>
+      </div>
+      <div class="about__cover">
+        <picture>
+          <source srcset="./src/assets/about/violet-capa-desktop.png" media="(min-width: 900px)" type="image/png" >
+          <img src="./src/assets/about/violet-capa-mobile.png" alt="Capa Anime">
+        </picture>
+      </div>
+    </div>
+  </section>
+  <section class="anime">
+    <div class="container container--sm">
+      <div class="anime__content">
+        <h3 class="title title--bg">Anime</h3>
+        <h4 class="title font--secundary-color">Violet Evergarden</h4>
+        <p class="text font--bottom">
+          A Grande Guerra finalmente chegou ao fim depois de quatro longos anos de conflito.O continente de Telesis lentamente começou a florescer mais uma vez.
+        </p>
+        <a class="button button--line" href="#">
+          Ver todos Episódios
+        </a>
+      </div>
+      <div class="anime__carousel">
+        <div class="carousel">
+          <div id="animeCarousel" class="flicking-viewport">
+            <div class="flicking-camera">
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/anime/capa-video1.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <span class="flicking-arrow-prev"></span>
+            <span class="flicking-arrow-next"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="manga">
+    <div class="container container--sm">
+      <div class="manga__carousel">
+        <div class="carousel">
+          <div id="mangaCarousel" class="flicking-viewport">
+            <div class="flicking-camera">
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel__item">
+                <a  href="#">
+                  <div class="carousel__item__back-title">
+                    <span>01</span>
+                  </div>
+                  <img src="./src/assets/manga/capa-manga.png" alt="Capa Manga">
+                  <div class="carousel__item__front-title">
+                    <span>01</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <span class="flicking-arrow-prev"></span>
+            <span class="flicking-arrow-next"></span>
+          </div>
+        </div>
+      </div>
+      <div class="manga__content">
+        <div>
+          <h2 class="title title--bg">Mangá</h2>
+          <h3 class="title font--secundary-color">Violet Evergarden</h3>
+          <p class="text font--bottom">
+            Violet Evergarden é uma “Auto Memories Doll “, um robô feito para ajudar aqueles que não conseguem escrever a colocar os seus pensamentos no papel.Ao longo da sua vida, Violet conhece muitas pessoas e conecta muitos corações através das suas cartas. Apesar do seu tempo com cada pessoa ser curto, os laços formados durante o seu tempo não serão facilmente esquecidos”.
+          </p>
+          <a class="button button--line" href="#">
+            Ver todos captiulos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="characters">
+    <div class="container container--sm">
+      <div class="characters__resume">
+        <h3 class="title font--white">Violet Evergarden</h3>
+        <p class="text font--white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odit molestiae illum eum libero, doloremque veritatis pariatur praesentium! At vitae nihil amet laudantium error culpa autem delectus quaerat dicta labore.
+        </p>
+      </div>
+      <div class="characters__options carousel">
+        <div id="charactersCarousel" class="flicking-viewport">
+          <div class="flicking-camera">
+            <!-- OPTION MOCKUP
+              <div class="characters__options__item active">
+                <span>
+                  <img src="" alt="">
+                </span>
+                <h4 class="text">Violet</h4>
+              </div> 
+            -->
+          </div>
+        </div>
+      </div>
+      <img class="characters__image" src="" alt="">
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container container--sm footer__newsletter">
+      <img class="footer__newsletter__image" src="./src/assets/footer/background-desktop.png" alt="">
+      <div class="footer__newsletter__content">
+        <div>
+          <h4 class="title--bg">
+            JUNTE-SE A NIKUNII
+          </h4>
+          <p class="text font--bottom">
+            Junte-se à newsletter oficial do nikunii para receber as últimas notícias.
+          </p>
+
+          <form>
+            <input class="input" type="email" placeholder="Endereço de e-mail" required>
+            <button class="button" type="submit">Inscrever-se</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__content">
+      <p class="text font--white">
+        Created by <a class="font--white" href="https://github.com/joaoxmb">@joaoxmb</a> ♡
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/scripts/main.js"></script>
+</body>
+</html>

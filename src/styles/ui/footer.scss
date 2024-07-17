@@ -1,0 +1,49 @@
+@use '../theme';
+
+.footer {
+
+  &__newsletter {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+    &__image {
+      width: 50%;
+    }
+    &__content {
+      width: 50%;
+
+      .text {
+        margin-top: 1rem;
+      }
+
+      form {
+        display: flex;
+
+        .input {
+          width: 60%;
+        }
+        .button {
+          width: 40%;
+        }
+      }
+
+      @media (max-width: theme.$tablet-break) {
+        padding-top: 3rem;
+      }
+    }
+
+    @media (max-width: theme.$tablet-break) {
+      flex-direction: column-reverse;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    background-color: theme.$color-primary;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,69 @@
+@use '../theme';
+
+.hero {
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+
+  background-image: url(@/assets/hero/background-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__brand {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    margin-top: -80px;
+    z-index: 1;
+
+    @media (max-width: theme.$desktop-break) {
+      margin-top: -40px;
+    }
+    @media (max-width: theme.$tablet-break) {
+      margin-top: -30px;
+    }
+
+    &__image {
+      width: 90%;
+      display: flex;
+      align-items: end;
+      position: relative;
+      z-index: 0;
+      
+      picture {
+        display: flex;
+        align-items: end;
+        
+        img {
+          width: 110%;
+        }
+      }
+    }
+  
+    &__trailer {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 0;
+      z-index: 1;
+
+      @media (max-width: theme.$tablet-break) {
+        .title {
+          display: none;
+        }
+      }
+
+      @media (max-width: theme.$mobile-break) {
+        display: none;
+      }
+    }
+  }
+
+}

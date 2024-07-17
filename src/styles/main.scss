@@ -1,0 +1,50 @@
+@use 'theme';
+@use 'layout';
+@use 'modules';
+
+// Ui
+@use 'ui/header';
+@use 'ui/footer';
+@use 'ui/hero';
+@use 'ui/about';
+@use 'ui/anime';
+@use 'ui/manga';
+@use 'ui/characters';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: theme.$fontFamily;
+}
+
+body {
+  background: theme.$page-color;
+  color: theme.$color-primary;
+  font-size: 16px;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  color: theme.$color-primary;
+  transition: color .3s ease;
+  text-decoration: none;
+  display: inline-block;
+  
+  &:hover {
+    color: lighten(theme.$color-primary, 0.3);
+  }
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}

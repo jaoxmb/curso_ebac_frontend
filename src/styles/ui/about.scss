@@ -1,0 +1,30 @@
+@use '../theme';
+
+.about {
+
+  img {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: theme.$mobile-break) {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      .about__cover {
+        display: none;
+      }
+      .about__content {
+        margin-top: 3rem;
+      }
+    }
+
+    & > * {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use '../theme';
+
+.manga {
+  padding: 6rem 0;
+
+  .container--sm {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: theme.$tablet-break) {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+
+  &__carousel {
+    width: 55%;
+  }
+  &__content {
+    width: 45%;
+  }
+}
