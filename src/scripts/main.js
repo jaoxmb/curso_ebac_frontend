@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { calcTime, formatedDate } from './utils';
 
 const handlerExpositor = () => {
@@ -15,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     handlerExpositor();
   }, 1000);
-
+  
   handlerExpositor();
   handlerExpositorDate();
 })
+AOS.init();
