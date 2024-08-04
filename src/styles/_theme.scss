@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Main
+$firstColor: #ffffff;
+$secondColor: #4F2AC3;
+$thirdColor: #000000;
+
+$fontFamily: 'Roboto', sans-serif;
+
+// More
+$backgroundColor: $thirdColor;
+$backgroundGradient: radial-gradient(circle, $secondColor -33%, $thirdColor 100%);
+
+// BreakPoints
+$breakMobile: 768px;
+$breakTablet: 992px;
+$breakDesktop: 1406px;
+
+// Class
+
+.container {
+  width: 100%;
+  max-width: $breakDesktop;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &--sm {
+    max-width: 1000px;
+  }
+}
+
+.text {
+  font-family: $fontFamily;
+  font-weight: normal;
+  font-size: 1rem;
+  color: $firstColor;
+
+  &--sm {
+    font-size: 0.875rem;
+  }
+  &--bg {
+    font-size: 1.125rem;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.title {
+  font-family: $fontFamily;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: $firstColor;
+
+  &--bg {
+    font-size: 3rem;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.button {
+  background-color: $secondColor;
+  border-radius: 8px;
+  padding: 12px;
+  color: $firstColor;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondColor, 5%);  
+  }
+}
