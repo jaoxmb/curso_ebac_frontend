@@ -2,7 +2,8 @@
 @use './components';
 
 // Layout
-@use "./layout/hero";
+@use './layout/hero';
+@use './layout/event';
 
 * {
   padding: 0;
