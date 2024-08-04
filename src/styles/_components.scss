@@ -1,0 +1,55 @@
+@use './theme';
+
+.text {
+  font-family: theme.$fontFamily;
+  font-weight: normal;
+  font-size: 1rem;
+  color: theme.$firstColor;
+  display: block;
+
+  &--sm {
+    font-size: 0.875rem;
+  }
+  &--bg {
+    font-size: 1.125rem;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.title {
+  font-family: theme.$fontFamily;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: theme.$firstColor;
+
+  &--bg {
+    font-size: 3rem;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.button {
+  display: block;
+  align-content: center;
+  background-color: theme.$secondColor;
+  border-radius: 8px;
+  padding: 12px;
+  color: theme.$firstColor;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken(theme.$secondColor, 5%);  
+  }
+}
