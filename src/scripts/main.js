@@ -1,24 +1,24 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { calcTime, formatedDate } from './utils';
+import Event from './event';
 
-const handlerExpositor = () => {
-  const { days, hours, mins, secs } = calcTime();
+const event = new Event("09-20-2024 18:00");
 
-  document.querySelector("#expositor")
-    .textContent = `${days + "d"} ${hours + "h"} ${mins + "m"} ${secs + "s"}`;
+const handlerCounter = () => {
+
+  event.counter((counter) => {
+    document.querySelector("#counter")
+      .textContent = counter;
+  })
 }
-const handlerExpositorDate = () => {
-  document.querySelector("#expositor_date")
-    .textContent = formatedDate();
+const handlerEventDate = () => {
+  document.querySelector("#event_date")
+    .textContent = event.formatedDate();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setInterval(() => {
-    handlerExpositor();
-  }, 1000);
-  
-  handlerExpositor();
-  handlerExpositorDate();
+  handlerCounter();
+  handlerEventDate();
+
+  AOS.init();
 })
-AOS.init();
