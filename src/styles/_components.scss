@@ -54,3 +54,24 @@
     background-color: darken(theme.$secondColor, 5%);  
   }
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 64px 0;
+
+  &__brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    img {
+      width: 190px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    color: theme.$firstColor;
+  }
+}
