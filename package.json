@@ -2,9 +2,9 @@
   "name": "curso_ebac_frontend",
   "version": "1.0.0",
   "description": "Este repositorio conterá todo o meu progresso de aprendizado do curso de FrontEnd.",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
