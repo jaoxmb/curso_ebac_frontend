@@ -66,12 +66,19 @@
     margin-bottom: 32px;
 
     img {
-      width: 190px;
+      width: 12rem;
     }
   }
 
   &__content {
     text-align: center;
     color: theme.$firstColor;
+  }
+
+  @media (max-width: theme.$breakMobile) {
+
+    &__brand img {
+      width: 10rem;
+    }    
   }
 }
