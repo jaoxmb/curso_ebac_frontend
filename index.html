@@ -10,43 +10,80 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
-            <h1 class="profile-name"><span class="name"></span></h1>
-            <h2 class="profile-username">@<span class="login"></span></h2>
-            <ul class="numbers">
-                <li class="numbers-item">
-                    <h4>Repositórios</h4>
-                    <span class="public_repos"></span>
-                </li>
-                <li class="numbers-item">
-                    <h4>Seguidores</h4>
-                    <span class="followers"></span>
-                </li>
-                <li class="numbers-item">
-                    <h4>Seguindo</h4>
-                    <span class="following"></span>
-                </li>
-            </ul>
-            <a href="#" class="profile-link">Ver no Github</a>
+    <header class="py-5">
+        <div class="container container--sm">
+            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt="user-image">
+            <h1 class="profile-name">
+                <span class="name fs-1"></span>
+            </h1>
+            <h2 class="profile-username">
+                <a class="profile-link text-light text-decoration-none">
+                    @<span class="login fs-4 text-decoration-underline"></span>
+                </a>
+            </h2>
+            <div class="mt-5 text-uppercase">
+                <div class="row justify-content-center">
+                    <h4 class="col-4 fs-6 text-secondary m-0">Repositórios</h4>
+                    <h4 class="col-4 fs-6 text-secondary m-0">Seguidores</h4>
+                    <h4 class="col-4 fs-6 text-secondary m-0">Seguindo</h4>
+                </div>
+                <div class="row">
+                    <span class="public_repos col-4 fs-1 fw-bold"></span>
+                    <span class="followers col-4 fs-1 fw-bold"></span>
+                    <span class="following col-4 fs-1 fw-bold"></span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
-        <div class="container">
+    <main class="py-5">
+        <div class="container container--md">
             <section id="repos">
-                <ul class="repos__list">
-                </ul>
+                <div class="repos__list">
+                </div>
 
-                <button id="load__data">Load more repos...</button>
+
+                <div class="loading__data">
+                    <div class="loading__data__placeholder card mb-3 overflow-hidden card-animation">
+                        <div class="row g-0">
+                            <div class="col-md-5 placeholder" style="min-height: 300px;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <div class="readme-content position-relative overflow-hidden"
+                                        style="min-height: 300px;">
+                                        <h1 class="card-title placeholder-glow">
+                                            <span class="placeholder col-6"></span>
+                                        </h1>
+                                        <p class="card-text placeholder-glow">
+                                            <span class="placeholder col-7"></span>
+                                            <span class="placeholder col-4"></span>
+                                            <span class="placeholder col-4"></span>
+                                            <span class="placeholder col-6"></span>
+                                            <span class="placeholder col-8"></span>
+                                            <span class="placeholder col-10"></span>
+                                            <span class="placeholder col-3"></span>
+                                            <span class="placeholder col-8"></span>
+                                            <span class="placeholder col-10"></span>
+                                            <span class="placeholder col-8"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading__data__end">
+                        <p class="text-center p-4 m-0 text-secondary">Você viu todos os meus repositórios públicos, que bacana! Me chame nas minhas redes sociais, vamos bater um papo juntos.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
-    <script src="./lib/showdown.min.js"></script>
-    <script src="./lib/in-view.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js" async></script>
+    <script src="./lib/in-view.min.js" async></script>
+    <script src="./lib/showdown.min.js" async></script>
+    <script type="module" src="./script/main.js" defer></script>
 </body>
 
 </html>
