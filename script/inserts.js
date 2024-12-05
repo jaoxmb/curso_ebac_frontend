@@ -6,7 +6,7 @@ export const insertUser = ({
   name,
   login,
   public_repos,
-  public_gists,
+  // public_gists,
   html_url,
   followers,
   following
@@ -23,26 +23,41 @@ export const insertUser = ({
 export const insertRepos = () => {
   const handlerLoadData = async () => {
     try {
+      const data = await getReadme()
   
-      (await getReadme())
-        .map(({ readme, html_url }) => {
+      data.map(({ name, readme, html_url, owner: { login } }) => {
           if (!readme) return;
   
           const card = document.createElement('div');
           const converter = new showdown.Converter();
           const parsedHTML = converter.makeHtml(readme);
-  
-          let body = document.createElement("div"), image;
-  
+          
+          let body = document.createElement("div");
+          let image;
+          
           body.innerHTML = parsedHTML;
-          image = body.querySelectorAll("img")[0];
+          body.querySelectorAll("img") // Replace invalid image src into valid src
+            .forEach((el, index) => {
+              const src = el.getAttribute("src");
+              const replacedSrc = src.replaceAll("./", `https://raw.githubusercontent.com/${login}/${name}/HEAD/`);
+              
+              if (index === 0) {
+                el.remove();
+                image = replacedSrc;
+              }
+
+              el.src = replacedSrc;
+            })
+          body.querySelectorAll("hr") // Remove all horizontal line
+            .forEach(el => el.remove()) 
+          
   
           card.innerHTML = `
                   <div class="card mb-3 overflow-hidden card-animation">
                     <div class="row g-0">
                       <div class="col-md-5">
                         <a href="${html_url}" target="_blank">
-                          <img src="${image ? image.src : "https://via.placeholder.com/1024x1024"}" class="img-fluid w-100 h-100 object-fit-cover" alt="from-script">
+                          <img src="${image || "https://via.placeholder.com/1024x1024"}" class="img-fluid w-100 h-100 object-fit-cover" alt="from-script">
                         </a>
                       </div>
                       <div class="col-md-7">
@@ -60,6 +75,7 @@ export const insertRepos = () => {
         })
   
     } catch (err) {
+      console.error(err);
       insertIntoElement('.loading__data__end', 'loading__data__end--opened', { type: 'class-add' });
       insertIntoElement('.loading__data__placeholder', 'loading__data__placeholder--closed', { type: 'class-add' });
     }
@@ -73,4 +89,8 @@ export const insertRepos = () => {
     .on('exit', () => {
       insertIntoElement('.loading__data__placeholder', 'loading__data__placeholder--closed', { type: 'class-add' });
     })
+}
+
+export const insertTitle = ({ name }) => {
+  document.title = name;
 }

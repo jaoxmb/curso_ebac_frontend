@@ -1,6 +1,6 @@
 import { getInfo, getRepos } from "./api.js";
 import { insertIntoElement } from "./utils.js";
-import { insertRepos, insertUser } from "./inserts.js";
+import { insertRepos, insertUser, insertTitle } from "./inserts.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const repos = await getRepos();
     
     insertUser(user);
-    insertRepos(repos);
+    insertTitle(user);
+    insertRepos();
   } catch (err) {
     insertIntoElement('body', `<div class="text-center position-absolute top-50 w-100">Nada por aqui!</div>`)
   }
