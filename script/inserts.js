@@ -57,7 +57,7 @@ export const insertRepos = () => {
                     <div class="row g-0">
                       <div class="col-md-5">
                         <a href="${html_url}" target="_blank">
-                          <img src="${image || "https://via.placeholder.com/1024x1024"}" class="img-fluid w-100 h-100 object-fit-cover" alt="from-script">
+                          <img src="${image || "./image/placeholder.png"}" class="img-fluid w-100 h-100 object-fit-cover" alt="from-script">
                         </a>
                       </div>
                       <div class="col-md-7">
