@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     insertTitle(user);
     insertRepos();
   } catch (err) {
-    insertIntoElement('body', `<div class="text-center position-absolute top-50 w-100">Nada por aqui!</div>`)
+    window.location.href = "../pages/form/"
   }
 })

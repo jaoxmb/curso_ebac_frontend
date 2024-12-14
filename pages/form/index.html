@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Portfólio - Acesse já!</title>
+  <link rel="stylesheet" href="../../main.css">
+</head>
+
+<body>
+  <div class="container container-md position-absolute top-50 start-50 translate-middle">
+
+    <header class="mb-5">
+      <h1>Acesse agora o seu <span class="highlight-text">Portfólio</span></h1>
+      <p class="text-secondary">Apresente seus projetos de maneira profissional e impressione com um perfil que reflete
+        suas habilidades e conquistas.</p>
+    </header>
+
+    <div class="container container-sm mb-5">
+      <form id="form">
+        <div class="d-flex gap-2 mb-2">
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" id="user" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-outline-danger">Acessar</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="user-error" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Usuário inválido!</strong>
+        <button type="button" class="btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <p>
+          O nome de usuário digitado não condiz com nenhum usuário válido no Github.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="user-success" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Usuário válido!</strong>
+        <button type="button" class="btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <p>
+          Redirecionando!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="position-fixed bottom-0 text-center w-100 mb-5">
+    <div class="container container-md">
+      <p class="text-secondary">by <a href="https://github.com/joaoxmb" class="text-white">@joaoxmb</a>, <a href="https://github.com/joaoxmb/curso_ebac_frontend/tree/exercicio_ajax" class="text-secondary">Public Repo!</a></p>
+    </div>
+  </footer>
+
+  <script src="../../lib/bootstrap.bundle.min.js" async></script>
+  <script src="../../lib/in-view.min.js" async></script>
+  <script src="../../lib/showdown.min.js" async></script>
+  <script type="module" src="./main.js" defer></script>
+</body>
+
+</html>

@@ -56,15 +56,22 @@
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.container--sm {
-  max-width: 640px;
-}
-.container--md {
   max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container-md {
+  max-width: 768px;
+}
+.container-sm {
+  max-width: 600px;
+}
+
+.highlight-text {
+  background: linear-gradient(90deg, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 header {
